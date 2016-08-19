@@ -1,0 +1,5 @@
+com/torq/config/AppConfig.class
+com/torq/controller/HomeController.class
+com/torq/config/WebConfig.class
+com/torq/config/ServletInitializer.class
+com/torq/config/DataSourceConfiguration.class
