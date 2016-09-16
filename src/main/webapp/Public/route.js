@@ -7,21 +7,28 @@ App.config(function ($stateProvider, $urlRouterProvider) {
         .state('/', {
             url: '/',
             templateUrl: 'home.html',
-            controller: 'loginController'
+            
         })
         
          $stateProvider
         .state('login', {
             url: '/login',
-            templateUrl: 'login.html',
+            templateUrl: 'Public/login/login.html',
             controller: 'loginController'
         })
         
         $stateProvider
         .state('signUp', {
             url: '/signUp',
-            templateUrl: 'signup.html',
-            controller: 'loginController'
+            templateUrl: 'Public/signup/signup.html',
+            controller: 'signupController'
+        })
+        
+        $stateProvider
+        .state('userManagement', {
+            url: '/userManagement',
+            templateUrl: 'Public/userManagement/userManagement.html',
+            controller: 'userManagementController'
         })
         
          $stateProvider

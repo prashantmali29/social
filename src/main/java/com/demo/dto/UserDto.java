@@ -4,12 +4,10 @@ public class UserDto {
 	
 	private String firstName;
 	private String lastName;
-	private String address;
+	private String city;
 	private String email;
 	private String userName;
 	private String password;
-	
-	
 	
 	
 	public String getUserName() {
@@ -36,11 +34,12 @@ public class UserDto {
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	public String getAddress() {
-		return address;
+	
+	public String getCity() {
+		return city;
 	}
-	public void setAddress(String address) {
-		this.address = address;
+	public void setCity(String city) {
+		this.city = city;
 	}
 	public String getEmail() {
 		return email;
