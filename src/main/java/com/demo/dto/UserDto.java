@@ -2,6 +2,8 @@ package com.demo.dto;
 
 public class UserDto {
 	
+	
+	private int id;
 	private String firstName;
 	private String lastName;
 	private String city;
@@ -10,6 +12,14 @@ public class UserDto {
 	private String password;
 	
 	
+	
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
 	public String getUserName() {
 		return userName;
 	}

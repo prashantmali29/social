@@ -1,12 +1,14 @@
 
-<div class="col-md-4"></div>
-<div class="col-md-4">
+<div class="col-md-2"></div>
+<div class="col-md-8">
 	<table class="table table-bordered">
 		<thead>
 			<tr>
 				<th>Firstname</th>
 				<th>Lastname</th>
 				<th>Email</th>
+				<th>UserName</th>
+				<th>Action</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -14,9 +16,11 @@
 				<td>{{user.firstName}}</td>
 				<td>{{user.lastName}}</td>
 				<td>{{user.email}}</td>
+				<td>{{user.userName}}</td>
+				<td><a href="" ui-sref= "signUp" ng-click = "edit(user.id)">Edit</a></td>
 			</tr>
 			
 		</tbody>
 	</table>
 </div>
-<div class="col-md-4"></div>
+<div class="col-md-2"></div>

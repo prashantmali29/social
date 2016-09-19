@@ -14,6 +14,7 @@ public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
 	private int id;
 	
 	@Column(name = "firstName")
@@ -39,6 +40,8 @@ public class User {
 		super();
 	}
 
+	
+	//To save user
 	public User(String firstName, String lastName, String city, String email, String userName, String password) {
 		super();
 		this.firstName = firstName;
@@ -48,6 +51,19 @@ public class User {
 		this.userName = userName;
 		this.password = password;
 	}
+  //To read user
+	public User(int id, String firstName, String lastName, String city, String email, String userName, String password) {
+	super();
+	this.id = id;
+	this.firstName = firstName;
+	this.lastName = lastName;
+	this.city = city;
+	this.email = email;
+	this.userName = userName;
+	this.password = password;
+}
+
+	
 
 	public String getFirstName() {
 		return firstName;

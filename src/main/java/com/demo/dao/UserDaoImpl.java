@@ -7,6 +7,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Projection;
 import org.hibernate.criterion.Projections;
 import org.hibernate.criterion.Restrictions;
+import org.hibernate.transform.Transformers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -45,14 +46,43 @@ public class UserDaoImpl  implements UserDao {
 	@Transactional
 	public List<User> getAllUsers() {
 		Criteria criteria = sessionFactory.getCurrentSession().createCriteria(User.class);
-		                    /*criteria.setProjection(Projections.projectionList().add(Projections.property("firstName"),"firstName")
+		                    criteria.setProjection(Projections.projectionList()
+		                    		.add(Projections.property("firstName"),"firstName")
+		                    		.add(Projections.property("userName"),"userName")
 		                    		.add(Projections.property("id"),"id")
 		                    		.add(Projections.property("lastName"),"lastName")
 		                    		.add(Projections.property("email"),"email")
-		                    		);*/
-		                    
-		List<User> userList = criteria.list();
+		                    		);
+		@SuppressWarnings("unchecked")
+		List<User> userList = criteria.setResultTransformer(Transformers.aliasToBean(UserDto.class)).list();
 		return userList;
+	}
+
+	@Override
+	@Transactional
+	public UserDto editUser(int userId) {
+		Criteria criteria = sessionFactory.getCurrentSession().createCriteria(User.class);
+		criteria.add(Restrictions.eq("id", userId));
+        criteria.setProjection(Projections.projectionList()
+        		.add(Projections.property("firstName"),"firstName")
+        		.add(Projections.property("userName"),"userName")
+        		.add(Projections.property("id"),"id")
+        		.add(Projections.property("lastName"),"lastName")
+        		.add(Projections.property("email"),"email")
+        		.add(Projections.property("city"),"city")
+        		.add(Projections.property("password"),"password")
+        		);
+       UserDto userDto = (UserDto) criteria.setResultTransformer(Transformers.aliasToBean(UserDto.class)).uniqueResult();
+       return userDto; 		
+        		
+	}
+
+	@Override
+	@Transactional
+	public boolean updateUser(UserDto dto) {
+		User user = new User(dto.getId(),dto.getFirstName(),dto.getLastName(),dto.getCity(),dto.getEmail(),dto.getUserName(),dto.getPassword());
+		sessionFactory.getCurrentSession().saveOrUpdate(user);
+		return true;
 	}
 
 }

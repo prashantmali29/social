@@ -26,8 +26,16 @@
 			<label for="pwd">Password:</label> <input type="password"
 				class="form-control" id="pwd" data-ng-model="userDto.password">
 		</div>
+		
+		<div ng-show = "userDto == null" >
 		<button type="submit" class="btn btn-default" data-ng-click="signUp()">
 			SignUp</button>
+		</div>
+
+		<div ng-hide="userDto == null">
+			<button type="submit" class="btn btn-default"
+				data-ng-click="updateUser()">Update</button>
+		</div>
 	</form>
 </div>
 <div class="col-md-4"></div>
