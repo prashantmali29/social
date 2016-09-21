@@ -12,7 +12,7 @@
 
 <script src="Public/angular/1.4.7/angular.min.js"></script>
 <script src="Public/angular/0.2.15/angular-ui-router.min.js"></script>
-
+<script src="Public/chart/highchart.js"></script>
 <!-- Core -->
 <script src="Public/app.js"></script>
 <script src="Public/route.js"></script>
@@ -32,6 +32,18 @@
 <script src="Public/userManagement/userManagementController.js"></script>
 <script src="Public/userManagement/userManagementService.js"></script>
 
+<!-- Custom Directive Module -->
+<script src="Public/customDirective/customDirectiveModule.js"></script>
+<script src="Public/customDirective/customDirective.js"></script>
+<script src="Public/customDirective/customDirectiveController.js"></script>
+<script src="Public/customDirective/customDirectiveService.js"></script>
+
+<!-- Chart Module -->
+<script src="Public/chart/chartModule.js"></script>
+<script src="Public/chart/chartController.js"></script>
+<script src="Public/chart/chartService.js"></script>
+<script src="Public/chart/chartDirective.js"></script>
+
 
 </head>
 <body ng-controller="loginController">
@@ -40,12 +52,13 @@
 			<div class="navbar-header">
 				<a class="navbar-brand" href="#">SpringJavaConfig + Angular</a>
 			</div>
-			
+
 			<ul class="nav navbar-nav navbar-right">
-			    <button class="btn" ui-sref="userManagement">UserManagement</button>
+				<button class="btn" ui-sref="userManagement">UserManagement</button>
 				<button class="btn" ui-sref="signUp">SignUp</button>
 				<button class="btn" ui-sref="login">Login</button>
-				
+				<button class="btn" ui-sref="chart">Chart</button>
+
 			</ul>
 		</div>
 	</nav>

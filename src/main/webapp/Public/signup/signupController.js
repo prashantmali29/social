@@ -12,7 +12,7 @@ signupModule.controller("signupController", [
 				console.log("in signup controller");
 				signupService.performSignUp($scope.userDto, function(userDto) {
 					$scope.user = userDto;
-					$location.path('/')
+					$location.path('/userManagement')
 				});
 			}
 

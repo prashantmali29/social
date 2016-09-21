@@ -7,10 +7,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@ComponentScan({ "com.demo.service", "com.demo.dao","com.demo.controller" })
+@ComponentScan({ "com.demo.service", "com.demo.dao", "com.demo.controller" })
 @Import(DataSourceConfiguration.class)
 public class AppConfig {
 
-
-	
 }

@@ -1,0 +1,1 @@
+var chartModule = angular.module("chartModule",['ui.router'])

@@ -25,6 +25,12 @@ App.config(function($stateProvider, $urlRouterProvider) {
 		templateUrl : 'Public/userManagement/userManagement.html',
 		controller : 'userManagementController'
 	})
+	
+	$stateProvider.state('chart', {
+		url : '/chart',
+		templateUrl : 'Public/chart/chart.html',
+		controller : 'chartController'
+	})
 
 	$stateProvider.state('home', {
 		url : '/home',
