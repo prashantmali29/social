@@ -31,7 +31,15 @@ App.config(function($stateProvider, $urlRouterProvider) {
 		templateUrl : 'Public/chart/chart.html',
 		controller : 'chartController'
 	})
+	
+	$stateProvider.state('googleMap', {
+		url : '/googleMap',
+		templateUrl : 'Public/googleMap/googleMap.html',
+		controller : 'googleMapController'
+	})
 
+	
+	
 	$stateProvider.state('home', {
 		url : '/home',
 		templateUrl : 'home.html',
