@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.demo.dao.UserDao;
 import com.demo.domain.User;
 import com.demo.dto.UserDto;
 import com.demo.service.UserService;
