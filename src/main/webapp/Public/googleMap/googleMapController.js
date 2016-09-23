@@ -4,34 +4,34 @@ googleMapModule.controller("googleMapController", [
 		function($scope, $rootScope) {
 			var cities = [
 			              {
-			                  city : 'Toronto',
+			                  city : 'Kothrud',
 			                  desc : 'This is the best city in the world!',
-			                  lat : 43.7000,
-			                  long : -79.4000
+			                  lat : 18.5087,
+			                  long : 73.8125
 			              },
 			              {
-			                  city : 'New York',
+			                  city : 'Sangli',
 			                  desc : 'This city is aiiiiite!',
-			                  lat : 40.6700,
-			                  long : -73.9400
+			                  lat : 16.8524,
+			                  long : 74.5815
 			              },
 			              {
-			                  city : 'Chicago',
+			                  city : 'Mumbai',
 			                  desc : 'This is the second best city in the world!',
-			                  lat : 41.8819,
-			                  long : -87.6278
+			                  lat : 19.0760,
+			                  long : 72.8777
 			              },
 			              {
-			                  city : 'Los Angeles',
+			                  city : 'Chennai',
 			                  desc : 'This city is live!',
-			                  lat : 34.0500,
-			                  long : -118.2500
+			                  lat : 13.0827,
+			                  long : 80.2707
 			              },
 			              {
-			                  city : 'Las Vegas',
+			                  city : 'Delhi',
 			                  desc : 'Sin City...\'nuff said!',
-			                  lat : 36.0800,
-			                  long : -115.1522
+			                  lat : 28.7041,
+			                  long : 77.1025
 			              }
 			          ];
 			
@@ -40,9 +40,9 @@ googleMapModule.controller("googleMapController", [
 			
 			
 			var mapOptions = {
-				zoom : 4,
-				center : new google.maps.LatLng(40.0000, -98.0000),
-				mapTypeId : google.maps.MapTypeId.TERRAIN
+				zoom : 6,
+				center : new google.maps.LatLng(16.8524, 74.5815),
+				mapTypeId : google.maps.MapTypeId.hybrid
 			}
 
 			$scope.map = new google.maps.Map(document.getElementById('map'),
